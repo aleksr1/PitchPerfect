@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MgA-WF-ICB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,24 +25,25 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDr-de-2DA"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-MP-LPk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-MP-LPk">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vo-af-Q49">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vo-af-Q49">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecordingAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ir-FH-eeU"/>
+                                    <segue destination="ZfV-Jd-Rxl" kind="show" id="FjJ-xJ-6qx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.28135564285540737" green="0.40365918114304766" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fu6-MP-LPk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O03-Vd-1T6"/>
                             <constraint firstItem="3vo-af-Q49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OFn-RK-OYc"/>
@@ -62,12 +63,12 @@
                                 <exclude reference="3vo-af-Q49"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OFn-RK-OYc"/>
+                                <exclude reference="WmF-nB-YmZ"/>
                                 <exclude reference="aUS-N1-b4Q"/>
                                 <exclude reference="spT-mc-Kma"/>
                                 <exclude reference="O03-Vd-1T6"/>
                                 <exclude reference="flk-dO-iUZ"/>
-                                <exclude reference="OFn-RK-OYc"/>
-                                <exclude reference="WmF-nB-YmZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -77,15 +78,16 @@
                                 <include reference="3vo-af-Q49"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OFn-RK-OYc"/>
+                                <include reference="WmF-nB-YmZ"/>
                                 <include reference="aUS-N1-b4Q"/>
                                 <include reference="spT-mc-Kma"/>
                                 <include reference="O03-Vd-1T6"/>
                                 <include reference="flk-dO-iUZ"/>
-                                <include reference="OFn-RK-OYc"/>
-                                <include reference="WmF-nB-YmZ"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Record" id="USf-4a-xat"/>
                     <connections>
                         <outlet property="lblRecord" destination="fu6-MP-LPk" id="nYH-p9-IUq"/>
                         <outlet property="recordButton" destination="Hrw-fS-mbo" id="fPv-kh-pPQ"/>
@@ -93,6 +95,43 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="424"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7bK-Nc-TBN">
+            <objects>
+                <viewController id="ZfV-Jd-Rxl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MN7-ce-rqC"/>
+                        <viewControllerLayoutGuide type="bottom" id="g1t-rw-l9n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LZk-45-jwR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7C-r6-5wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221.5" y="424"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="42F-Fr-PCQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MgA-WF-ICB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="co7-fV-h53">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y9i-4V-p3u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NR-d7-HEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="424"/>
         </scene>
