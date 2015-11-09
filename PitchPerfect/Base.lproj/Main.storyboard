@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -98,18 +100,105 @@
             </objects>
             <point key="canvasLocation" x="1482" y="424"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="7bK-Nc-TBN">
             <objects>
-                <viewController id="ZfV-Jd-Rxl" sceneMemberID="viewController">
+                <viewController id="ZfV-Jd-Rxl" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MN7-ce-rqC"/>
                         <viewControllerLayoutGuide type="bottom" id="g1t-rw-l9n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LZk-45-jwR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTL-9M-ADa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Snail">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="ZfV-Jd-Rxl" eventType="touchUpInside" id="Smk-iB-Fxe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL8-6D-ruW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Rabbit"/>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="ZfV-Jd-Rxl" eventType="touchUpInside" id="rXD-kR-7Lt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxZ-J6-two">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="ZfV-Jd-Rxl" eventType="touchUpInside" id="now-p0-OHZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-8M-pia">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="audioRestart:" destination="ZfV-Jd-Rxl" eventType="touchUpInside" id="oip-qw-4vv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VTL-9M-ADa" firstAttribute="top" secondItem="MN7-ce-rqC" secondAttribute="bottom" constant="34" id="CYx-QD-Pfz"/>
+                            <constraint firstItem="SxZ-J6-two" firstAttribute="centerY" secondItem="LZk-45-jwR" secondAttribute="centerY" id="HYS-4Q-kzf"/>
+                            <constraint firstItem="VTL-9M-ADa" firstAttribute="leading" secondItem="LZk-45-jwR" secondAttribute="leadingMargin" constant="7" id="N5a-du-fdw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GL8-6D-ruW" secondAttribute="trailing" constant="9" id="Poq-K2-Juy"/>
+                            <constraint firstItem="SxZ-J6-two" firstAttribute="centerX" secondItem="LZk-45-jwR" secondAttribute="centerX" id="ZF0-sN-0dC"/>
+                            <constraint firstItem="GL8-6D-ruW" firstAttribute="top" secondItem="MN7-ce-rqC" secondAttribute="bottom" constant="34" id="pbp-3z-dRC"/>
+                            <constraint firstItem="4A6-8M-pia" firstAttribute="centerX" secondItem="LZk-45-jwR" secondAttribute="centerX" id="wlD-QL-cvo"/>
+                            <constraint firstItem="4A6-8M-pia" firstAttribute="centerY" secondItem="LZk-45-jwR" secondAttribute="centerY" id="zXC-fQ-3OB">
+                                <variation key="widthClass=compact" constant="248"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="VTL-9M-ADa"/>
+                                <exclude reference="GL8-6D-ruW"/>
+                                <exclude reference="SxZ-J6-two"/>
+                                <exclude reference="4A6-8M-pia"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="wlD-QL-cvo"/>
+                                <exclude reference="zXC-fQ-3OB"/>
+                                <exclude reference="Poq-K2-Juy"/>
+                                <exclude reference="pbp-3z-dRC"/>
+                                <exclude reference="HYS-4Q-kzf"/>
+                                <exclude reference="ZF0-sN-0dC"/>
+                                <exclude reference="CYx-QD-Pfz"/>
+                                <exclude reference="N5a-du-fdw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="VTL-9M-ADa"/>
+                                <include reference="GL8-6D-ruW"/>
+                                <include reference="SxZ-J6-two"/>
+                                <include reference="4A6-8M-pia"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="wlD-QL-cvo"/>
+                                <include reference="zXC-fQ-3OB"/>
+                                <include reference="Poq-K2-Juy"/>
+                                <include reference="pbp-3z-dRC"/>
+                                <include reference="HYS-4Q-kzf"/>
+                                <include reference="ZF0-sN-0dC"/>
+                                <include reference="CYx-QD-Pfz"/>
+                                <include reference="N5a-du-fdw"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7C-r6-5wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,6 +227,8 @@
     </scenes>
     <resources>
         <image name="Microphone" width="100" height="100"/>
+        <image name="Rabbit" width="100" height="100"/>
+        <image name="Snail" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
     </resources>
 </document>
