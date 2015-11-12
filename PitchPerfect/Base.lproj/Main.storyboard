@@ -27,13 +27,6 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDr-de-2DA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-MP-LPk">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vo-af-Q49">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -42,6 +35,13 @@
                                     <action selector="stopRecordingAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ir-FH-eeU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-MP-LPk">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,15 +53,15 @@
                             </constraint>
                             <constraint firstItem="Hrw-fS-mbo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aUS-N1-b4Q"/>
                             <constraint firstItem="fu6-MP-LPk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="flk-dO-iUZ">
-                                <variation key="widthClass=compact" constant="88"/>
+                                <variation key="widthClass=compact" constant="90"/>
                             </constraint>
                             <constraint firstItem="Hrw-fS-mbo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="spT-mc-Kma"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Hrw-fS-mbo"/>
-                                <exclude reference="fu6-MP-LPk"/>
                                 <exclude reference="3vo-af-Q49"/>
+                                <exclude reference="fu6-MP-LPk"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="OFn-RK-OYc"/>
@@ -75,8 +75,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Hrw-fS-mbo"/>
-                                <include reference="fu6-MP-LPk"/>
                                 <include reference="3vo-af-Q49"/>
+                                <include reference="fu6-MP-LPk"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="OFn-RK-OYc"/>
@@ -193,18 +193,18 @@
                                 <exclude reference="YxG-U5-wuJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="CYx-QD-Pfz"/>
-                                <exclude reference="N5a-du-fdw"/>
+                                <exclude reference="fKI-6k-cHw"/>
+                                <exclude reference="fhg-h5-l5k"/>
+                                <exclude reference="wlD-QL-cvo"/>
+                                <exclude reference="zXC-fQ-3OB"/>
                                 <exclude reference="Poq-K2-Juy"/>
                                 <exclude reference="pbp-3z-dRC"/>
                                 <exclude reference="HYS-4Q-kzf"/>
                                 <exclude reference="ZF0-sN-0dC"/>
+                                <exclude reference="CYx-QD-Pfz"/>
+                                <exclude reference="N5a-du-fdw"/>
                                 <exclude reference="hJv-J0-ksA"/>
                                 <exclude reference="N5F-80-Eyn"/>
-                                <exclude reference="wlD-QL-cvo"/>
-                                <exclude reference="zXC-fQ-3OB"/>
-                                <exclude reference="fKI-6k-cHw"/>
-                                <exclude reference="fhg-h5-l5k"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -217,18 +217,18 @@
                                 <include reference="YxG-U5-wuJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="CYx-QD-Pfz"/>
-                                <include reference="N5a-du-fdw"/>
+                                <include reference="fKI-6k-cHw"/>
+                                <include reference="fhg-h5-l5k"/>
+                                <include reference="wlD-QL-cvo"/>
+                                <include reference="zXC-fQ-3OB"/>
                                 <include reference="Poq-K2-Juy"/>
                                 <include reference="pbp-3z-dRC"/>
                                 <include reference="HYS-4Q-kzf"/>
                                 <include reference="ZF0-sN-0dC"/>
+                                <include reference="CYx-QD-Pfz"/>
+                                <include reference="N5a-du-fdw"/>
                                 <include reference="hJv-J0-ksA"/>
                                 <include reference="N5F-80-Eyn"/>
-                                <include reference="wlD-QL-cvo"/>
-                                <include reference="zXC-fQ-3OB"/>
-                                <include reference="fKI-6k-cHw"/>
-                                <include reference="fhg-h5-l5k"/>
                             </mask>
                         </variation>
                     </view>

@@ -18,20 +18,10 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-//            var filePathUrl = NSURL.fileURLWithPath(filePath)
-//            
-//        } else {
-//            print("Error finding movie_quote.mp3")
-//        }
-        
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
-
-
-        
     }
 
     override func didReceiveMemoryWarning() {
