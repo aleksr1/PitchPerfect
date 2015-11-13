@@ -24,21 +24,7 @@ class PlaySoundsViewController: UIViewController {
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
     @IBAction func playSlowAudio(sender: UIButton) {
         playAudioSpeedDialer(0.5)
     }
@@ -67,6 +53,7 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
+        audioPlayer.currentTime = 0.0
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -86,6 +73,7 @@ class PlaySoundsViewController: UIViewController {
     
     func playAudioSpeedDialer(rate: Float) {
         audioPlayer.stop()
+        audioEngine.stop()
         audioPlayer.rate = rate
         audioPlayer.play()
     }

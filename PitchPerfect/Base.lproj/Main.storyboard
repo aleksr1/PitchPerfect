@@ -42,6 +42,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcP-Nw-uJz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseRecordingAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fR-E5-Onl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,17 +65,24 @@
                             <constraint firstItem="fu6-MP-LPk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="flk-dO-iUZ">
                                 <variation key="widthClass=compact" constant="90"/>
                             </constraint>
+                            <constraint firstItem="EcP-Nw-uJz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mmn-Vc-1as">
+                                <variation key="widthClass=compact" constant="253"/>
+                            </constraint>
                             <constraint firstItem="Hrw-fS-mbo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="spT-mc-Kma"/>
+                            <constraint firstItem="EcP-Nw-uJz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x5r-dd-60X"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Hrw-fS-mbo"/>
                                 <exclude reference="3vo-af-Q49"/>
                                 <exclude reference="fu6-MP-LPk"/>
+                                <exclude reference="EcP-Nw-uJz"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="OFn-RK-OYc"/>
                                 <exclude reference="WmF-nB-YmZ"/>
+                                <exclude reference="mmn-Vc-1as"/>
+                                <exclude reference="x5r-dd-60X"/>
                                 <exclude reference="aUS-N1-b4Q"/>
                                 <exclude reference="spT-mc-Kma"/>
                                 <exclude reference="O03-Vd-1T6"/>
@@ -77,10 +94,13 @@
                                 <include reference="Hrw-fS-mbo"/>
                                 <include reference="3vo-af-Q49"/>
                                 <include reference="fu6-MP-LPk"/>
+                                <include reference="EcP-Nw-uJz"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="OFn-RK-OYc"/>
                                 <include reference="WmF-nB-YmZ"/>
+                                <include reference="mmn-Vc-1as"/>
+                                <include reference="x5r-dd-60X"/>
                                 <include reference="aUS-N1-b4Q"/>
                                 <include reference="spT-mc-Kma"/>
                                 <include reference="O03-Vd-1T6"/>
@@ -91,6 +111,7 @@
                     <navigationItem key="navigationItem" title="Record" id="USf-4a-xat"/>
                     <connections>
                         <outlet property="lblRecord" destination="fu6-MP-LPk" id="nYH-p9-IUq"/>
+                        <outlet property="pauseRecordingButton" destination="EcP-Nw-uJz" id="yRy-cN-t2V"/>
                         <outlet property="recordButton" destination="Hrw-fS-mbo" id="fPv-kh-pPQ"/>
                         <outlet property="stopRecordButton" destination="3vo-af-Q49" id="jdT-Na-t0V"/>
                         <segue destination="ZfV-Jd-Rxl" kind="show" identifier="stopRecording" id="U5i-WE-0ri"/>
