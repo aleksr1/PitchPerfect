@@ -159,16 +159,6 @@
                                     <action selector="stopAudio:" destination="ZfV-Jd-Rxl" eventType="touchUpInside" id="now-p0-OHZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-8M-pia">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Restart">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="audioRestart:" destination="ZfV-Jd-Rxl" eventType="touchUpInside" id="oip-qw-4vv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSE-2C-TBt">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -199,25 +189,18 @@
                             <constraint firstItem="g1t-rw-l9n" firstAttribute="top" secondItem="XSE-2C-TBt" secondAttribute="bottom" constant="136" id="fhg-h5-l5k"/>
                             <constraint firstItem="XSE-2C-TBt" firstAttribute="leading" secondItem="LZk-45-jwR" secondAttribute="leadingMargin" constant="7" id="hJv-J0-ksA"/>
                             <constraint firstItem="GL8-6D-ruW" firstAttribute="top" secondItem="MN7-ce-rqC" secondAttribute="bottom" constant="34" id="pbp-3z-dRC"/>
-                            <constraint firstItem="4A6-8M-pia" firstAttribute="centerX" secondItem="LZk-45-jwR" secondAttribute="centerX" id="wlD-QL-cvo"/>
-                            <constraint firstItem="4A6-8M-pia" firstAttribute="centerY" secondItem="LZk-45-jwR" secondAttribute="centerY" id="zXC-fQ-3OB">
-                                <variation key="widthClass=compact" constant="248"/>
-                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="VTL-9M-ADa"/>
                                 <exclude reference="GL8-6D-ruW"/>
                                 <exclude reference="SxZ-J6-two"/>
-                                <exclude reference="4A6-8M-pia"/>
                                 <exclude reference="XSE-2C-TBt"/>
                                 <exclude reference="YxG-U5-wuJ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="fKI-6k-cHw"/>
                                 <exclude reference="fhg-h5-l5k"/>
-                                <exclude reference="wlD-QL-cvo"/>
-                                <exclude reference="zXC-fQ-3OB"/>
                                 <exclude reference="Poq-K2-Juy"/>
                                 <exclude reference="pbp-3z-dRC"/>
                                 <exclude reference="HYS-4Q-kzf"/>
@@ -233,15 +216,12 @@
                                 <include reference="VTL-9M-ADa"/>
                                 <include reference="GL8-6D-ruW"/>
                                 <include reference="SxZ-J6-two"/>
-                                <include reference="4A6-8M-pia"/>
                                 <include reference="XSE-2C-TBt"/>
                                 <include reference="YxG-U5-wuJ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="fKI-6k-cHw"/>
                                 <include reference="fhg-h5-l5k"/>
-                                <include reference="wlD-QL-cvo"/>
-                                <include reference="zXC-fQ-3OB"/>
                                 <include reference="Poq-K2-Juy"/>
                                 <include reference="pbp-3z-dRC"/>
                                 <include reference="HYS-4Q-kzf"/>
