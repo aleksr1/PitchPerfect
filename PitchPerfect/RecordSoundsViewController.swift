@@ -91,20 +91,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! audioSession.setActive(false)
     }
     @IBAction func pauseRecordingAudio(sender: UIButton) {
-        
-        
-        
-        
-        
-        print("pause pressed")
         if pauseRecordingButton.titleLabel?.text == "Pause" {
-            print("text == pause")
             pauseRecordingButton.setTitle("Unpaused", forState: .Normal)
-            print(pauseRecordingButton.titleLabel?.text)
             audioRecorder.pause()
             pausedTime = audioRecorder.currentTime
         }else {
-            print("else")
             pauseRecordingButton.setTitle("Pause", forState: .Normal)
             audioRecorder.recordAtTime(pausedTime)
         }
